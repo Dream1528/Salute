@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+-  **Name**: Salaheldeen Ginawi
+- **Dot Number**: ginawi.2
+- **Due Date**: 1/31 @ 3:00 PM EST
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +102,16 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+- I’m passionate about data science, especially machine learning and data analysis. My goal is to become a data scientist, focusing on building predictive models and extracting insights from data. Outside of data science, I love hiking and playing soccer. These activities keep me active and help me stay creative and focused.
+- I aim to create tools that align with my career goals, like a DataFrame for data manipulation or a RegressionModel for predictive analytics. This portfolio will reflect my skills and passion for data-driven solutions.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +120,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +187,101 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1:DataFrame
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A simplified tabular data structure (like Pandas DataFrame) to store and manipulate structured data (rows and columns). Focus on core operations for data cleaning and analysis.
+      
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - void addRow(String[] row): Adds a row of data (enforces column consistency).
+    - void removeRow(int index): Removes a row by index.
+    - void addColumn(String columnName, String defaultValue): Adds a new column with a default value.
+    - int rowCount(): Returns the number of rows.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - double columnMean(String columnName): Computes the mean of a numeric column.
+    - void fillMissing(String columnName, String value): Replaces missing values in a column.
+    - DataFrame filterRows(String condition): Returns a new DataFrame filtered by a condition (e.g.,          "age > 30").
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+ 
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. Inherits from Standard, allowing dynamic row/column modifications.
+        
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Uses Map<String, List<String>> internally to model columns.
+        
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - MISSING_VALUE to represent nulls (e.g., "NaN").
+        
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - columnMean uses rowCount() and iterates through rows via kernel methods.
+
+- Component Design #2: RegressionModel
+  - **Description**:
+    - A component to train and evaluate a simple linear regression model (e.g., y = mx + b). Focus on 
+    incremental updates and statistical metrics.
+    - 
+  - **Kernel Methods**:
+    - void addDataPoint(double x, double y): Adds a training data point.
+    - void clearModel(): Resets coefficients (slope/intercept) to zero.
+    - double predict(double x): Returns predicted y using current coefficients.
+
+  - **Secondary Methods**:
+    - void train(): Updates coefficients using least squares on stored data points.
+    - double calculateRSquared(): Computes the model’s goodness-of-fit.
+    - double calculateRMSE(): Computes root mean squared error.
+      
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes. Coefficients change during training.
+        
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Uses a List<Pair<Double, Double>> for data points.
+
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - MAX_ITERATIONS for training convergence.
+
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - train() uses kernel methods like addDataPoint to iterate through data.
+
+- Component Design #3: DataSampler
+  - **Description**:
+    - A component to handle sampling strategies (random, stratified, etc.) from a dataset. Useful for        splitting data into training/test sets
+
+  - **Kernel Methods**:
+    - void loadDataset(List<String[]> data): Loads a dataset into the sampler.
+    - List<String[]> getSample(int size): Returns a random sample of size rows.
+    - void setSeed(long seed): Sets a seed for reproducible sampling.
+
+  - **Secondary Methods**:
+    - List<String[]> stratifiedSample(String columnName, double ratio): Samples while preserving class            distribution in columnName.
+    - void splitTrainTest(double trainRatio, List<String[]> train, List<String[]> test): Splits data             into train/test sets.
+    - boolean isBalanced(String columnName): Checks if a column’s classes are balanced.
+      
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes. Dataset can be reloaded or modified.
+
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Uses Map<String, List<String[]>> for stratified sampling by class.
+
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - DEFAULT_SEED for random number generation.
+
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - stratifiedSample uses getSample() internally for each class subset.
 
 ## Post-Assignment
 
